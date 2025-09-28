@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Parcel cache
+.cache/
+.parcel-cache/
+
+# Build output
+dist/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+.env

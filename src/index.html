@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scrum Board</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Scrum Board</h1>
+    </header>
+
+    <main>
+      <!-- Members Section -->
+      <section class="members-section">
+        <h2>Team Members</h2>
+        <form id="member-form">
+          <input type="text" id="member-name" placeholder="Name" required />
+          <input type="text" id="member-role" placeholder="Role" required />
+          <button type="submit">Add Member</button>
+        </form>
+        <ul id="members-list"></ul>
+      </section>
+
+      <!-- Task Creation -->
+      <section class="tasks-section">
+        <h2>Create Task</h2>
+        <form id="task-form">
+          <input type="text" id="task-title" placeholder="Task Title" required />
+          <textarea id="task-desc" placeholder="Task Description" required></textarea>
+          <select id="task-category" required>
+            <option value="">Select Category</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="UX">UX</option>
+          </select>
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+
+      <!-- Filters & Sorting -->
+      <section class="filters-section">
+        <h2>Filters & Sorting</h2>
+        <div class="filters">
+          <label>
+            Member:
+            <select id="filter-member"></select>
+          </label>
+          <label>
+            Category:
+            <select id="filter-category">
+              <option value="">All</option>
+              <option value="Frontend">Frontend</option>
+              <option value="Backend">Backend</option>
+              <option value="UX">UX</option>
+            </select>
+          </label>
+          <label>
+            <input type="checkbox" id="filter-assigned-only" />
+            Show Assigned Only
+          </label>
+          <label>
+            Sort:
+            <select id="sort-option">
+              <option value="">None</option>
+              <option value="timestamp-asc">Created ↑</option>
+              <option value="timestamp-desc">Created ↓</option>
+              <option value="title-asc">Title A–Z</option>
+              <option value="title-desc">Title Z–A</option>
+            </select>
+          </label>
+        </div>
+        <div class="filter-buttons">
+          <button id="apply-filters">Apply</button>
+          <button id="clear-filters">Clear</button>
+        </div>
+      </section>
+
+      <!-- Task Board -->
+      <section class="board">
+        <div id="new-tasks" class="column">
+          <h2>New</h2>
+        </div>
+        <div id="in-progress" class="column">
+          <h2>In Progress</h2>
+        </div>
+        <div id="done" class="column">
+          <h2>Done</h2>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>
