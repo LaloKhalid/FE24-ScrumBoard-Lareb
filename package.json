@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "tsc",
+    "build": "parcel build ./src/index.html --dist-dir public --public-url ./",
+    "clean": "del-cli ./.parcel-cache ./dist ./public",
     "seed": "node --loader ts-node/esm src/seed.ts"
   },
   "keywords": [],
