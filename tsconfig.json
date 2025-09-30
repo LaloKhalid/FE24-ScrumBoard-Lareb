@@ -9,7 +9,7 @@
     // See also https://aka.ms/tsconfig/module
     "module": "ES6",
     "target": "ES6",
-    "types": [],
+  
     "rootDir": "./src",
     "outDir": "./dist",
      "esModuleInterop": true,
