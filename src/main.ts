@@ -1,4 +1,3 @@
-import "./styles.css"; // for styling
 import { Member } from "./models/Member";
 import { Task } from "./models/Task";
 import {
